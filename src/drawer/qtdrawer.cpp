@@ -24,5 +24,8 @@ void QtDrawer::drawPolygon(Face& face) {
 }
 
 void QtDrawer::drawModel(BaseModel& model) {
-    return;
+    auto f = model.getFaces();
+    for (int i = 0; i < f.size(); i++) {
+        drawPolygon(f[i]);
+    }
 }
