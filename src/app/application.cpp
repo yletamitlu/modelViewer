@@ -23,7 +23,7 @@ void Application::loadModel(std::string filename) {
 
 void Application::drawModel(BaseDrawer& drawer) {
     auto f = model->getFaces();
-    drawer.drawPolygon(f[0]);
-    drawer.drawPolygon(f[1]);
-    drawer.drawPolygon(f[2]);
+    for (int i = 0; i < f.size(); i++) {
+        drawer.drawPolygon(f[i]);
+    }
 }
