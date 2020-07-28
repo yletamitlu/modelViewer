@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>877</width>
+    <height>542</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+background-color: rgba(248, 248, 248, 250);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>0</y>
+      <width>541</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QGraphicsView" name="graphicsView"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>311</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+	background-color: rgb(209, 209, 209);
+	border: 6px solid rgba(174, 174, 174, 255);
+}
+QLabel{
+	border: 0px solid rgba(129, 118, 106, 150);
+}
+
+QGroupBox {
+	background-color: rgba(250, 195, 180, 100);
+    border: 2px solid rgba(250, 195, 180, 250);
+    border-style: outset;
+    border-width: 2px;
+	border-radius:10px;
+}
+
+QGroupBox:hover{
+    border: 4px solid rgba(129, 118, 106, 150);
+    border-style: inset;
+}
+
+QPushButton
+{
+max-height:25px;
+background-color: rgba(240, 175, 180, 150);
+border: 2px solid rgb(138, 138, 138);
+border-radius: 13px;
+border-style:outset;}
+
+QPushButton:hover {
+border-radius: 13px;
+border-style:intset;
+}
+
+QPushButton::pressed{
+background-color: rgb(154, 191, 185);
+border:2px solid rgb(116, 122, 122);
+border-style:inset;
+}
+
+QPushButton::checked{
+background-color: rgba(172, 224, 233, 130);
+border:4px solid rgba(0, 114, 114, 200);
+border-style:inset;
+}
+
+QDoubleSpinBox{
+height:25px;
+font: 14pt &quot;Liberation Sans&quot;;
+border-radius:1px;
+}
+
+QDoubleSpinBox::down-button {
+image: url(:/dowmRM.svg);
+subcontrol-position:  left; width: 22px; height:20px;
+background-color: rgba(240, 175, 180, 150);
+border: 3px solid rgb(138, 138, 138);
+border-radius: 2px;
+border-style:outset;
+}
+QDoubleSpinBox::up-button {
+image: url(:/upRM.svg);
+subcontrol-position:  right; width: 22px; height:20px;
+background-color: rgba(240, 175, 180, 150);
+border: 3px solid rgb(138, 138, 138);
+border-radius: 2px;
+border-style:outset;
+}
+QDoubleSpinBox::down-button::enabled::hover {
+border-style:intset;
+}
+QDoubleSpinBox::up-button::enabled::hover {
+border-style:intset;
+}
+QDoubleSpinBox::down-button::enabled::pressed {
+background-color: rgba(240, 175, 180, 150);
+border:2px solid rgb(116, 122, 122);
+border-style:inset;
+}
+QDoubleSpinBox::up-button::enabled::pressed {
+background-color: rgba(240, 175, 180, 150);
+border:2px solid rgb(116, 122, 122);
+border-style:inset;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="2,0,0,1,2,0,0,1,2,0,0,1,2">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));</string>
+       </property>
+       <property name="text">
+        <string>Load file</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>           X                         Y                         Z</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QDoubleSpinBox" name="rotate_box_X">
+         <property name="minimum">
+          <double>-360.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>360.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="rotate_box_Y">
+         <property name="minimum">
+          <double>-360.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="rotate_box_Z">
+         <property name="minimum">
+          <double>-360.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>360.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_rotate">
+       <property name="text">
+        <string>Rotate</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>                                      K</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="resize_box_K">
+       <property name="maximum">
+        <double>10.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_resize">
+       <property name="text">
+        <string>Resize</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>                 X                                       Y</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QDoubleSpinBox" name="move_box_X"/>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="move_box_Y"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_move">
+       <property name="text">
+        <string>Move</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>dowmRM.svg</file>
+        <file>upRM.svg</file>
+    </qresource>
+</RCC>
