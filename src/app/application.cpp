@@ -4,7 +4,6 @@ Application::Application() : model(nullptr) {
 }
 
 void Application::loadModel(std::string filename) {
-    std::cout << "FILENAME: " << filename << std::endl;
     auto reader = new FileReader(filename);
 
     auto data = reader->read();

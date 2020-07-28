@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>877</width>
-    <height>542</height>
+    <width>886</width>
+    <height>555</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,8 +24,8 @@ background-color: rgba(248, 248, 248, 250);
      <rect>
       <x>330</x>
       <y>0</y>
-      <width>541</width>
-      <height>531</height>
+      <width>550</width>
+      <height>550</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -46,7 +46,7 @@ background-color: rgba(248, 248, 248, 250);
       <x>10</x>
       <y>10</y>
       <width>311</width>
-      <height>521</height>
+      <height>541</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -166,12 +166,12 @@ border-style:inset;
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="label_4">
        <property name="styleSheet">
         <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="text">
-        <string>           X                         Y                         Z</string>
+        <string>                 X                                       Y</string>
        </property>
       </widget>
      </item>
@@ -191,16 +191,6 @@ border-style:inset;
         <widget class="QDoubleSpinBox" name="rotate_box_Y">
          <property name="minimum">
           <double>-360.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QDoubleSpinBox" name="rotate_box_Z">
-         <property name="minimum">
-          <double>-360.000000000000000</double>
-         </property>
-         <property name="maximum">
-          <double>360.000000000000000</double>
          </property>
         </widget>
        </item>
