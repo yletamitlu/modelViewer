@@ -12,6 +12,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     drawer->getScene()->setSceneRect(-ui->graphicsView->width(), -ui->graphicsView->height(),
                                     ui->graphicsView->width() * 2, ui->graphicsView->height() * 2);
+
+
 }
 
 MainWindow::~MainWindow()
@@ -41,4 +43,12 @@ void MainWindow::on_pushButton_clicked()
     }
 
     app.drawModel(*drawer);
+}
+
+void MainWindow::on_btnResize_clicked() {
+    std::cout << ui->boxResizeK->value();
+}
+
+void MainWindow::on_btnMove_clicked() {
+    std::cout << ui->boxMoveX->value();
 }

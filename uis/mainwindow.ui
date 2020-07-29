@@ -178,7 +178,7 @@ border-style:inset;
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QDoubleSpinBox" name="rotate_box_X">
+        <widget class="QDoubleSpinBox" name="boxRotateX">
          <property name="minimum">
           <double>-360.000000000000000</double>
          </property>
@@ -188,7 +188,7 @@ border-style:inset;
         </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="rotate_box_Y">
+        <widget class="QDoubleSpinBox" name="boxRotateY">
          <property name="minimum">
           <double>-360.000000000000000</double>
          </property>
@@ -197,7 +197,7 @@ border-style:inset;
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_rotate">
+      <widget class="QPushButton" name="btnRotate">
        <property name="text">
         <string>Rotate</string>
        </property>
@@ -227,7 +227,7 @@ border-style:inset;
       </widget>
      </item>
      <item>
-      <widget class="QDoubleSpinBox" name="resize_box_K">
+      <widget class="QDoubleSpinBox" name="boxResizeK">
        <property name="maximum">
         <double>10.000000000000000</double>
        </property>
@@ -237,7 +237,7 @@ border-style:inset;
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_resize">
+      <widget class="QPushButton" name="btnResize">
        <property name="text">
         <string>Resize</string>
        </property>
@@ -272,15 +272,15 @@ border-style:inset;
         <number>5</number>
        </property>
        <item>
-        <widget class="QDoubleSpinBox" name="move_box_X"/>
+        <widget class="QDoubleSpinBox" name="boxMoveX"/>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="move_box_Y"/>
+        <widget class="QDoubleSpinBox" name="boxMoveY"/>
        </item>
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_move">
+      <widget class="QPushButton" name="btnMove">
        <property name="text">
         <string>Move</string>
        </property>

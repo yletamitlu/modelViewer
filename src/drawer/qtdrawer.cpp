@@ -2,7 +2,8 @@
 
 
 QtDrawer::QtDrawer(QGraphicsScene* s) : scene(s) {
-    pen = QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
+
+    pen = QPen(QColor(153, 26, 26, 255), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
 
     //система координат привет
     scene->addLine(QLine(-250, 0, 250, 0), this->pen);
@@ -12,6 +13,8 @@ QtDrawer::QtDrawer(QGraphicsScene* s) : scene(s) {
     scene->addLine(QLine(0, -250, 0, 250), this->pen);
     scene->addLine(QLine(5, -245, 0, -250), this->pen);
     scene->addLine(QLine(-5, -245, 0, -250), this->pen);
+
+    pen = QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
 
     //а это X и Y соотетственно, ведь у куграфиксцены нет добавить текст в нужную точку))0
     scene->addLine(QLine(250, 20, 245, 10), this->pen);
