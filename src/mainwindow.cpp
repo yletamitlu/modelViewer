@@ -50,5 +50,5 @@ void MainWindow::on_btnResize_clicked() {
 }
 
 void MainWindow::on_btnMove_clicked() {
-    std::cout << ui->boxMoveX->value();
+    app.move(ui->boxMoveX->value(), ui->boxMoveY->value());
 }

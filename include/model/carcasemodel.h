@@ -6,9 +6,11 @@
 class CarcaseModel : public BaseModel
 {
 public:
-    CarcaseModel(std::vector<Face>& _faces) {
+    explicit CarcaseModel(std::vector<Face>& _faces) {
         this->faces = _faces;
     }
+
+    ~CarcaseModel() {}
 };
 
 #endif // CARCASEMODEL_H

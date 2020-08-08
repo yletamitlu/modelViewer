@@ -7,12 +7,13 @@
 
 #include "face.h"
 #include "vertice.h"
+#include "tools/matrix.h"
 
 
-class BaseModel
-{
+class BaseModel {
 public:
     virtual ~BaseModel() {}
+
     std::vector<Face>& getFaces() {
         return faces;
     };

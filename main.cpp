@@ -3,6 +3,9 @@
 #include <QApplication>
 #include <iostream>
 
+#include "tools/matrix.h"
+
+
 
 int main(int argc, char *argv[])
 {

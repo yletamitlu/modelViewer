@@ -16,10 +16,15 @@ void Application::loadModel(std::string filename) {
 
     model = parser->parse();
 
-    delete reader;
+    modifier.set(model);
 
+    delete reader;
 }
 
 void Application::drawModel(BaseDrawer& drawer) {
     drawer.drawModel(*model);
+}
+
+void Application::move(double x, double y) {
+    modifier.move(x, y);
 }
