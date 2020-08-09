@@ -25,8 +25,7 @@ private:
     BaseModel* model;
     Matrix<double> state;
 
-    void changeModel();
-
+    void changeModel(Matrix<double>& transformation);
 };
 
 

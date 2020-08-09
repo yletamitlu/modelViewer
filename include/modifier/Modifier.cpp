@@ -16,7 +16,7 @@ void Modifier::move(double x, double y) {
 
     state *= moveMatrix;
 
-    changeModel();
+    changeModel(moveMatrix);
 }
 
 void Modifier::scale(double k) {
@@ -27,7 +27,7 @@ void Modifier::scale(double k) {
 
     state *= scaleMatrix;
 
-    changeModel();
+    changeModel(scaleMatrix);
 }
 
 void Modifier::rotateX(double x) {
@@ -40,7 +40,7 @@ void Modifier::rotateX(double x) {
 
     state *= rotateMatrix;
 
-    changeModel();
+    changeModel(rotateMatrix);
 }
 
 void Modifier::rotateY(double y) {
@@ -53,10 +53,10 @@ void Modifier::rotateY(double y) {
 
     state *= rotateMatrix;
 
-    changeModel();
+    changeModel(rotateMatrix);
 }
 
-void Modifier::changeModel() {
+void Modifier::changeModel(Matrix<double>& transformation) {
     auto& faces = model->getFaces();
 
     //итерируемся по фейсам
@@ -69,7 +69,7 @@ void Modifier::changeModel() {
                                         vertice.z,
                                         1};
             //умножаем его на матрицу преобразования
-            auto newV = state * vrtc;
+            auto newV = transformation * vrtc;
 
             //создаем из полученного вектора новую вершину v
             Vertice v(newV[0], newV[1], newV[2]);
@@ -77,8 +77,4 @@ void Modifier::changeModel() {
             vertice = v;
         }
     }
-    state = {{1, 0, 0, 0},
-             {0, 1, 0, 0},
-             {0, 0, 1, 0},
-             {0, 0, 0, 1}};
 }
