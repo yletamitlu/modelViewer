@@ -19,6 +19,9 @@ background-color: rgba(248, 248, 248, 250);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
@@ -28,6 +31,15 @@ background-color: rgba(248, 248, 248, 250);
       <height>541</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	background-color: rgba(250, 195, 180, 100);
+    border: 2px solid rgba(250, 195, 180, 250);
+    border-style: outset;
+    border-width: 2px;
+	border-radius:10px;
+}</string>
+    </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
@@ -36,7 +48,17 @@ background-color: rgba(248, 248, 248, 250);
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QGraphicsView" name="graphicsView"/>
+      <widget class="QGraphicsView" name="graphicsView">
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgb(255, 255, 255);
+border: 2px solid rgba(151, 155, 154, 250);    
+border-style: outset;
+border-width: 2px;
+border-radius:10px;
+</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>

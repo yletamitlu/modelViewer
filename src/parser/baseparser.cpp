@@ -17,13 +17,14 @@ void BaseParser::parseFaces(std::stringstream& data) {
     int a, b, c;
 
     data >> a;
-    f.vertices.push_back(vs[a]);
+    //так как в obj файлах индексирование с 1
+    f.vertices.push_back(vs[a - 1]);
 
     data >> b;
-    f.vertices.push_back(vs[b]);
+    f.vertices.push_back(vs[b - 1]);
 
     data >> c;
-    f.vertices.push_back(vs[c]);
+    f.vertices.push_back(vs[c - 1]);
 
     fs.push_back(f);
 }
