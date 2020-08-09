@@ -25,20 +25,35 @@ public:
 
 
 
+        state = {{1, 0, 0, 0},
+                 {0, 1, 0, 0},
+                 {0, 0, 1, 0},
+                 {0, 0, 0, 1}};
+
         state *= moveMatrix;
 
         state.print();
 
-//        model->StateMatrix().print_matrix();
+        auto& faces = model->getFaces();
 
-//        for (int i = 0; i < 1; i++){
-//            Matrix<double> f(1, 4);
-//            f[0][0] = model->getFaces().at(i).vertices[i].x;
-//            f[0][1] = model->getFaces().at(i).vertices[i].y;
-//            f[0][2] = model->getFaces().at(i).vertices[i].z;
-//            f[0][3] = 1;
-//            f.print_matrix();
-//        }
+        //итерируемся по фейсам
+        for (auto & f : faces){
+            //для каждой вершины тек фейса
+            for (auto & vertice : f.vertices) {
+                //создаем вектор с вершиной {x, y, z, 1}
+                std::vector<double> vrtc = {vertice.x,
+                                            vertice.y,
+                                            vertice.z,
+                                            1};
+                //умножаем его на матрицу преобразования
+                auto newV = state * vrtc;
+
+                //создаем из полученного вектора новую вершину v
+                Vertice v(newV[0], newV[1], newV[2]);
+
+                vertice = v;
+            }
+        }
     }
 
 private:

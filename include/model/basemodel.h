@@ -18,6 +18,10 @@ public:
         return faces;
     };
 
+    void setFaces(std::vector<Face>& f) {
+        faces = f;
+    };
+
 protected:
     std::vector<Face> faces;
 };

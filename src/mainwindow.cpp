@@ -42,6 +42,7 @@ void MainWindow::on_pushButton_clicked()
         msg.exec();
     }
 
+    drawer->getScene()->clear();
     app.drawModel(*drawer);
 }
 
@@ -50,5 +51,9 @@ void MainWindow::on_btnResize_clicked() {
 }
 
 void MainWindow::on_btnMove_clicked() {
+    std::cout << ui->boxMoveX->value() << std::endl;
+    std::cout << ui->boxMoveY->value() << std::endl;
     app.move(ui->boxMoveX->value(), ui->boxMoveY->value());
+    drawer->getScene()->clear();
+    app.drawModel(*drawer);
 }

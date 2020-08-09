@@ -9,6 +9,7 @@
 struct Face
 {
     Face() = default;
+    Face(std::vector<Vertice>& v) : vertices(v) {}
 
     std::vector<Vertice> vertices;
 };

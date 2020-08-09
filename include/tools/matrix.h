@@ -136,11 +136,9 @@ public:
         std::vector<T> res(size);
 
         for (int i = 0; i < size; i++) {
+            res[i] = 0;
             for (int j = 0; j < size; j++) {
-                res[i] = 0;
-                for (int k = 0; k < size; k++) {
-                    res[i] += data[i][j] * v[i];
-                }
+                res[i] += v[j] * data[j][i];
             }
         }
 

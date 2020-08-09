@@ -24,6 +24,8 @@ public:
 private:
     QPen pen;
     QGraphicsScene* scene;
+
+    void drawSK();
 };
 
 
