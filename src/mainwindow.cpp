@@ -25,7 +25,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     auto fileName = QFileDialog::getOpenFileName(this,
-        tr("Open Image"), "/home/ekaterinaalekseeva", tr("Text files (*.txt)"));
+        tr("Open Image"), "/home/ekaterinaalekseeva", tr("Text files (*.txt, *.obj)"));
     std::cout << fileName.toStdString() << std::endl;
 
     if (!fileName.size()) {
