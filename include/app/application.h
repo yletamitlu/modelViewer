@@ -8,7 +8,7 @@
 #include "model/carcasemodel.h"
 #include "exceptions/readexception.h"
 #include "drawer/basedrawer.h"
-#include "modifier/Modifier.h"
+#include "model/Modifier.h"
 
 class Application {
 public:

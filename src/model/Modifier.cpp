@@ -1,4 +1,4 @@
-#include "Modifier.h"
+#include "model/Modifier.h"
 
 void Modifier::set(BaseModel* m) {
     model = m;
