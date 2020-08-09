@@ -47,13 +47,26 @@ void MainWindow::on_pushButton_clicked()
 }
 
 void MainWindow::on_btnResize_clicked() {
-    std::cout << ui->boxResizeK->value();
+    app.scale(ui->boxResizeK->value());
+    drawer->getScene()->clear();
+    app.drawModel(*drawer);
 }
 
 void MainWindow::on_btnMove_clicked() {
-    std::cout << ui->boxMoveX->value() << std::endl;
-    std::cout << ui->boxMoveY->value() << std::endl;
     app.move(ui->boxMoveX->value(), ui->boxMoveY->value());
     drawer->getScene()->clear();
     app.drawModel(*drawer);
 }
+
+void MainWindow::on_btnRotateX_clicked() {
+    app.rotateX(ui->boxRotateX->value());
+    drawer->getScene()->clear();
+    app.drawModel(*drawer);
+}
+
+void MainWindow::on_btnRotateY_clicked() {
+    app.rotateY(ui->boxRotateY->value());
+    drawer->getScene()->clear();
+    app.drawModel(*drawer);
+}
+

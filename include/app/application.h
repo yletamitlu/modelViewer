@@ -21,6 +21,9 @@ public:
     void drawModel(BaseDrawer& drawer);
 
     void move(double x, double y);
+    void scale(double k);
+    void rotateX(double x);
+    void rotateY(double y);
 
 private:
     BaseModel* model;

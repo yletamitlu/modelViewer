@@ -22,10 +22,10 @@ background-color: rgba(248, 248, 248, 250);
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>0</y>
-      <width>550</width>
-      <height>550</height>
+      <x>329</x>
+      <y>9</y>
+      <width>551</width>
+      <height>541</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -138,7 +138,7 @@ border-style:inset;
     <property name="title">
      <string/>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout" stretch="2,0,0,1,2,0,0,1,2,0,0,1,2">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="2,0,0,1,0,0,0,1,2,0,0,1,2">
      <property name="spacing">
       <number>10</number>
      </property>
@@ -197,11 +197,28 @@ border-style:inset;
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="btnRotate">
-       <property name="text">
-        <string>Rotate</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="btnRotateX">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>RotateX</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRotateY">
+         <property name="text">
+          <string>RotateY</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
       <spacer name="verticalSpacer_3">
@@ -272,10 +289,24 @@ border-style:inset;
         <number>5</number>
        </property>
        <item>
-        <widget class="QDoubleSpinBox" name="boxMoveX"/>
+        <widget class="QDoubleSpinBox" name="boxMoveX">
+         <property name="minimum">
+          <double>-1000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="boxMoveY"/>
+        <widget class="QDoubleSpinBox" name="boxMoveY">
+         <property name="minimum">
+          <double>-1000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>

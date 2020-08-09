@@ -29,6 +29,9 @@ private slots:
     void on_pushButton_clicked();
     void on_btnResize_clicked();
     void on_btnMove_clicked();
+    void on_btnRotateX_clicked();
+    void on_btnRotateY_clicked();
+
 private:
     Ui::MainWindow *ui;
 

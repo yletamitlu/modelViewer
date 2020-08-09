@@ -31,12 +31,17 @@ void Application::drawModel(BaseDrawer& drawer) {
 }
 
 void Application::move(double x, double y) {
-    auto a = model->getFaces();
-
-    //std::cout << "do:    " << a[0].vertices[0].x << " " << a[0].vertices[0].y << " " << a[0].vertices[0].z << std::endl;
     modifier.move(x, y);
+}
 
-    a = model->getFaces();
+void Application::scale(double k) {
+    modifier.scale(k);
+}
 
-    //std::cout << "posle: " << a[0].vertices[0].x << " " << a[0].vertices[0].y << " " << a[0].vertices[0].z << std::endl;
+void Application::rotateX(double x) {
+    modifier.rotateX(x);
+}
+
+void Application::rotateY(double y) {
+    modifier.rotateY(y);
 }
